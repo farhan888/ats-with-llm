@@ -1,5 +1,5 @@
 import './App.css'
-import SignUp from './auth/Signup'
+import SignUp from './auth/SignUp'
 function App() {
     return (
         <>
