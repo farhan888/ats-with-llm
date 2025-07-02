@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './Signup.css'
-function SignUp() {
+type SignUpProps = {
+  onSuccess?: () => void
+}
+function SignUp({ onSuccess }: SignUpProps) {
 	const [form, setForm] = useState({ name: '', email: '', password: '' })
 	const [submitted, setSubmitted] = useState(false)
 
@@ -12,6 +15,10 @@ function SignUp() {
 		e.preventDefault()
 		setSubmitted(true)
 		// Here you would typically send form data to your backend
+		// Simulate login after signup
+		setTimeout(() => {
+		if (onSuccess) onSuccess()
+		}, 1000)
 	}
 
 	return (

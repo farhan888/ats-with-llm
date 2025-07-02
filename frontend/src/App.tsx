@@ -1,9 +1,16 @@
+import { useState } from 'react'
 import './App.css'
 import SignUp from './auth/SignUp'
+import UserFeed from './userFeed/UserFeed'
 function App() {
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
     return (
         <>
-            <SignUp />
+        {isLoggedIn ? (
+            <UserFeed />
+        ) : (
+            <SignUp onSuccess={() => setIsLoggedIn(true)} />
+        )}
         </>
     )
 }
