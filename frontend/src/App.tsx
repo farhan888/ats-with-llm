@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import SignUp from './auth/SignUp'
-import UserFeed from './userFeed/UserFeed'
+import UserFeed from './userfeed/UserFeed'
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false)
     return (
