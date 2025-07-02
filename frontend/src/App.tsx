@@ -1,9 +1,9 @@
 import './App.css'
-import Signup from './auth/SignUp'
+import SignUp from './auth/Signup'
 function App() {
     return (
         <>
-            <Signup />
+            <SignUp />
         </>
     )
 }
