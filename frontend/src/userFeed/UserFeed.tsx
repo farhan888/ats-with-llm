@@ -1,40 +1,32 @@
 import { useEffect, useState } from "react";
 
+
 function UserFeed() {
-    const userId = "123"
-    const [jobs, setJobs] = useState<{ id: string; title: string; company: string }[]>([])
-    const [loading, setLoading] = useState(true)
+    const userId = "123";
+    const [jobs, setJobs] = useState<{ id: string; title: string; company: string }[]>([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Simulate API call
         setLoading(true);
         setTimeout(() => {
-            // Simulated job postings for the user
             setJobs([
                 { id: "1", title: "Frontend Developer", company: "Tech Corp" },
                 { id: "2", title: "Backend Engineer", company: "DataWorks" },
                 { id: "3", title: "Full Stack Developer", company: "Webify" },
+                { id: "4", title: "DevOps Specialist", company: "Cloudify" },
+                { id: "5", title: "UI/UX Designer", company: "DesignHub" },
+                { id: "6", title: "QA Tester", company: "QualityFirst" },
             ]);
             setLoading(false);
-        }, 1000)
-    }, [userId])
+        }, 1000);
+    }, [userId]);
 
     return (
         <div>
-            <h1>User Feed</h1>
-            {loading ? (
-                <p>Loading job postings...</p>
-            ) : (
-                <ul>
-                    {jobs.map((job) => (
-                        <li key={job.id}>
-                            <strong>{job.title}</strong> at {job.company}
-                        </li>
-                    ))}
-                </ul>
-            )}
+            <div>Welcome {userId}</div>
+            <div>Implement job postings here</div>
         </div>
     );
 }
 
-export default UserFeed
+export default UserFeed;
